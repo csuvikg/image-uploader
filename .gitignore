@@ -1,0 +1,7 @@
+# IntelliJ config files
+.idea/
+*.iml
+
+# Build output
+/target/
+node_modules/
