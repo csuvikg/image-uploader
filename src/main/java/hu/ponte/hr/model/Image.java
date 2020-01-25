@@ -1,5 +1,6 @@
 package hu.ponte.hr.model;
 
+import hu.ponte.hr.controller.ImageMeta;
 import lombok.Builder;
 import lombok.Getter;
 import org.bson.types.Binary;
@@ -19,4 +20,14 @@ public class Image {
     private long size;
     private String digitalSign;
     private Binary image;
+
+    public ImageMeta toImageMeta() {
+        return ImageMeta.builder()
+                .id(id.toString())
+                .name(name)
+                .mimeType(mimeType)
+                .size(size)
+                .digitalSign(digitalSign)
+                .build();
+    }
 }
