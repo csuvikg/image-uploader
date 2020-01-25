@@ -1,0 +1,14 @@
+upload:
+  base:
+    path: api/ui
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: storage
+  servlet:
+    multipart:
+      max-file-size: 2MB
+      max-request-size: 2MB
+      enabled: true

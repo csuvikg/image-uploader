@@ -8,11 +8,10 @@ import lombok.Getter;
  */
 @Getter
 @Builder
-public class ImageMeta
-{
-	private String id;
-	private String name;
-	private String mimeType;
-	private long size;
-	private String digitalSign;
+public class ImageMeta {
+    private String id;
+    private String name;
+    private String mimeType;
+    private long size;
+    private String digitalSign;
 }

@@ -4,5 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SignService {
-
+    public String sign(byte[] bytes) {
+        return "";
+    }
 }
