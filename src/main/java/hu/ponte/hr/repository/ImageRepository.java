@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 public interface ImageRepository extends MongoRepository<Image, UUID> {
+    // Queries all data but omits the image binary field, so getting metadata is cheaper
     @Query(value="{}", fields="{'image': 0}")
     List<Image> findAllOmitImage();
 }

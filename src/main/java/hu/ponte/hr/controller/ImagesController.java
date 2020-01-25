@@ -18,7 +18,6 @@ import java.util.Optional;
 @RestController()
 @RequestMapping("api/images")
 public class ImagesController {
-
     private final ImageStore imageStore;
 
     public ImagesController(ImageStore imageStore) {

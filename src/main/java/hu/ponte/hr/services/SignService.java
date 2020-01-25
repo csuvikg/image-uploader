@@ -14,8 +14,8 @@ public class SignService {
     private static PrivateKey pk;
     static {
         try {
-            InputStream keyIs = new ClassPathResource("config/keys/key.private").getInputStream();
-            PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(IOUtils.toByteArray(keyIs));
+            InputStream keyIStream = new ClassPathResource("config/keys/key.private").getInputStream();
+            PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(IOUtils.toByteArray(keyIStream));
             KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             pk = keyFactory.generatePrivate(spec);
         } catch (Exception e) {

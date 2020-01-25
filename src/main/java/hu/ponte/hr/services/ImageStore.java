@@ -17,11 +17,8 @@ import java.util.stream.Collectors;
 public class ImageStore {
     final ImageRepository repository;
 
-    final SignService signService;
-
-    public ImageStore(ImageRepository repository, SignService signService) {
+    public ImageStore(ImageRepository repository) {
         this.repository = repository;
-        this.signService = signService;
     }
 
     public Image save(MultipartFile file) throws IOException {
@@ -50,6 +47,7 @@ public class ImageStore {
         try {
             imageId = UUID.fromString(id);
         } catch (IllegalArgumentException e) {
+            // id string did not match UUID pattern
             return Optional.empty();
         }
 
