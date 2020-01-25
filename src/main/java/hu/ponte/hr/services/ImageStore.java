@@ -32,7 +32,7 @@ public class ImageStore {
                 .name(file.getOriginalFilename())
                 .mimeType(file.getContentType())
                 .size(file.getSize())
-                .digitalSign(signService.sign(data))
+                .digitalSign(SignService.sign(data))
                 .image(new Binary(data))
                 .build();
 
